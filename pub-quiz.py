@@ -16,6 +16,9 @@ quiz_questions = [
     # Learners can add more questions here following the same structure
 ]
 
+# intitialise score
+score = 0
+
 # Loop through each question
 for question in quiz_questions:
     # Display the question and options
@@ -29,8 +32,10 @@ for question in quiz_questions:
     # Check if the answer is correct
     if user_answer == question["answer"]:
         print("Correct!")
+        score +=1
     else:
         print(f"Wrong! The correct answer was {question['answer']}.")
 
 # Goodbye message
 print("Thanks for playing the Pub Quiz!")
+print(f"You have answered {score}/{len(quiz_questions)} questions correctly")
